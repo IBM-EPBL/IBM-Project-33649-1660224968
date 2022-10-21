@@ -1,5 +1,11 @@
 ## Real-Time Communication System Powered by AI for Specially Abled
 ### Category: Artificial Intelligence
+### Team ID: PNT2022TMID06610
+### Team Details:
+Team Lead - Balapathy. V
+Team Member 1 - Surya Narayanan. S
+Team Member 2 - Goutham Raj. K
+Team Member 3 - Santhosh. S
 ### Project Description:
 In our society, we have people with disabilities.
 The technology is developing day by day but no significant developments are undertaken for the betterment of these people.
