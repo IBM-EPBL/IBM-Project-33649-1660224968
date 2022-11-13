@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+
+<body>
+    <h1>Real-time communication for specially-abled persons</h1>
+    <form method="POST">
+        <div><input type="file" name="myInput" accept="image/*" onchange="loadFile(event)"></div>
+        <div><img id="output"/></div>
+        <script>
+        var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+            URL.revokeObjectURL(output.src)
+            }
+        };
+        </script>
+        <div><input type="submit" name="myButton" value="Translate"></div>
+    </form>
+</body>
+
+<style>
+    body {
+        background-image: url("{{url_for('static', filename='Background.jpg')}}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+    }
+    h1 {
+        text-align: center;
+        color:black;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
+        padding: 15px 32px;
+        font-size: 40px;
+    }
+    input[type="file"] {
+        margin-bottom:40px;
+        text-align: center;
+        background-color: #ffffff6c;
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 5px 5px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    input[type="submit"] {
+        margin-bottom:40px;
+        text-align: center;
+        border: none;
+        padding: 5px 5px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    
+    img {
+        margin-bottom:40px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        height: 128px;
+        width: 128px;
+    }
+
+    div
+    {
+        text-align: center;
+    }
+
+</style>
+</html>
